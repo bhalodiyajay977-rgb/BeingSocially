@@ -73,3 +73,23 @@ p {
     @apply bg-secondary text-secondary-foreground font-semibold px-6 py-3 rounded-lg border border-border transition-all duration-200 hover:bg-secondary/80 active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
   }
 }
+
+@keyframes client-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.client-slider-track {
+  display: flex;
+  width: max-content;
+  animation: client-slide 28s linear infinite;
+}
+
+.client-slider-group {
+  display: flex;
+  flex-shrink: 0;
+}

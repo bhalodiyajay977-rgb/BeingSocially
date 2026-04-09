@@ -11,6 +11,7 @@ import ProblemSolution from '@/components/ProblemSolution.jsx';
 import Services from '@/components/Services.jsx';
 import Process from '@/components/Process.jsx';
 import Results from '@/components/Results.jsx';
+import ClientSlider from '@/components/ClientSlider.jsx';
 import LeadForm from '@/components/LeadForm.jsx';
 import FAQItem from '@/components/FAQItem.jsx';
 import { Target, Zap, Award, Shield } from 'lucide-react';
@@ -73,6 +74,7 @@ const HomePage = () => {
 
       <main>
         <Hero />
+        <ClientSlider />
         <ProblemSolution />
         <Services />
         <Process />

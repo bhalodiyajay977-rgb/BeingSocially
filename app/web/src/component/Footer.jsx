@@ -12,8 +12,18 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">BS</span>
+              <div className="w-10 h-10 rounded-lg overflow-hidden border border-border bg-background flex items-center justify-center">
+                <img
+                  src="/company-logo.png"
+                  alt="BeingSocially logo"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling;
+                    if (fallback) fallback.classList.remove('hidden');
+                  }}
+                />
+                <span className="hidden text-primary font-bold text-xl">BS</span>
               </div>
               <span className="text-xl font-bold">BeingSocially</span>
             </div>
